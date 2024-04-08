@@ -1,6 +1,20 @@
 export default function TaskCard(
     {props: {title, description, createdAt}}: {props: {title: string, description: string, createdAt: any}} 
 ) {
+    const created = new Date(createdAt)
+    const year = created.getFullYear()
+    const month = created.getMonth() + 1
+    const day = created.getDate()
+    var hours:any = created.getHours()
+    var minutes:any = created.getMinutes()
+
+    if (minutes < 10) {
+        minutes = `0${minutes.toString()}`
+    }
+    if (hours < 10) {
+        hours = `0${hours.toString()}`
+    }
+
     return (
         <>
             <div className="taskBox bg-background-700 text-text-100">
@@ -14,7 +28,7 @@ export default function TaskCard(
                     </div>
                 </div>
                 <p className="taskBoxDate text-xs text-text-400">
-                    {createdAt.toString()}
+                    {`${hours}:${minutes} / ${year}-${month}-${day}`}
                 </p>
             </div>
         </>

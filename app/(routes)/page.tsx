@@ -43,7 +43,7 @@ export default async function Home() {
                   key={task.id} 
                   href={{ 
                     pathname: '/taskPage', 
-                    query: { task: JSON.stringify(task)} 
+                    query: { id: task.id }
                   }} 
                   >
                   <TaskCard props={{ title: task.title, description: task.description, createdAt: task.createdAt}}/>
@@ -63,7 +63,7 @@ export default async function Home() {
                   key={task.id} 
                   href={{ 
                     pathname: '/taskPage', 
-                    query: { task: JSON.stringify(task)} 
+                    query: { id: task.id }
                   }} 
                   >
                   <TaskCard props={{ title: task.title, description: task.description, createdAt: task.createdAt}}/>
