@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --text-50: #f1f3f3;
+      --text-100: #e4e6e7;
+      --text-200: #c9cdcf;
+      --text-300: #aeb4b7;
+      --text-400: #939b9f;
+      --text-500: #788287;
+      --text-600: #60686c;
+      --text-700: #484e51;
+      --text-800: #303436;
+      --text-900: #181a1b;
+      --text-950: #0c0d0e;
+      
+      --background-50: #eff2f5;
+      --background-100: #dfe4ec;
+      --background-200: #c0cad8;
+      --background-300: #a0afc5;
+      --background-400: #8194b1;
+      --background-500: #61799e;
+      --background-600: #4e617e;
+      --background-700: #3a495f;
+      --background-800: #27313f;
+      --background-900: #131820;
+      --background-950: #0a0c10;
+      
+      --primary-50: #e7effd;
+      --primary-100: #cfdffc;
+      --primary-200: #a0bff8;
+      --primary-300: #709ff5;
+      --primary-400: #407ef2;
+      --primary-500: #115eee;
+      --primary-600: #0d4bbf;
+      --primary-700: #0a398f;
+      --primary-800: #07265f;
+      --primary-900: #031330;
+      --primary-950: #020918;
+      
+      --secondary-50: #ebf0fa;
+      --secondary-100: #d7e1f4;
+      --secondary-200: #afc3e9;
+      --secondary-300: #87a5de;
+      --secondary-400: #5f88d3;
+      --secondary-500: #376ac8;
+      --secondary-600: #2c55a0;
+      --secondary-700: #213f78;
+      --secondary-800: #162a50;
+      --secondary-900: #0b1528;
+      --secondary-950: #050b14;
+      
+      --accent-50: #e9effc;
+      --accent-100: #d3e0f8;
+      --accent-200: #a6c1f2;
+      --accent-300: #7aa2eb;
+      --accent-400: #4e82e4;
+      --accent-500: #2163de;
+      --accent-600: #1b4fb1;
+      --accent-700: #143c85;
+      --accent-800: #0d2859;
+      --accent-900: #07142c;
+      --accent-950: #030a16;
+      
+    }
+    .dark {
+      --text-50: #0c0d0d;
+      --text-100: #181a1b;
+      --text-200: #313335;
+      --text-300: #494d50;
+      --text-400: #62666a;
+      --text-500: #7a8085;
+      --text-600: #95999d;
+      --text-700: #afb3b6;
+      --text-800: #caccce;
+      --text-900: #e4e6e7;
+      --text-950: #f2f2f3;
+      
+      --background-50: #0a0c10;
+      --background-100: #131820;
+      --background-200: #27313f;
+      --background-300: #3a495f;
+      --background-400: #4e617e;
+      --background-500: #61799e;
+      --background-600: #8194b1;
+      --background-700: #a0afc5;
+      --background-800: #c0cad8;
+      --background-900: #dfe4ec;
+      --background-950: #eff2f5;
+      
+      --primary-50: #020918;
+      --primary-100: #031330;
+      --primary-200: #07265f;
+      --primary-300: #0a398f;
+      --primary-400: #0d4bbf;
+      --primary-500: #115eee;
+      --primary-600: #407ef2;
+      --primary-700: #709ff5;
+      --primary-800: #a0bff8;
+      --primary-900: #cfdffc;
+      --primary-950: #e7effd;
+      
+      --secondary-50: #050b14;
+      --secondary-100: #0b1528;
+      --secondary-200: #162a50;
+      --secondary-300: #213f78;
+      --secondary-400: #2c55a0;
+      --secondary-500: #376ac8;
+      --secondary-600: #5f88d3;
+      --secondary-700: #87a5de;
+      --secondary-800: #afc3e9;
+      --secondary-900: #d7e1f4;
+      --secondary-950: #ebf0fa;
+      
+      --accent-50: #030a16;
+      --accent-100: #07142c;
+      --accent-200: #0d2859;
+      --accent-300: #143c85;
+      --accent-400: #1b4fb1;
+      --accent-500: #2163de;
+      --accent-600: #4e82e4;
+      --accent-700: #7aa2eb;
+      --accent-800: #a6c1f2;
+      --accent-900: #d3e0f8;
+      --accent-950: #e9effc;
+    }
+}
+  
+  
+:root {
+    --task-color-green: #009b00;
+    --task-color-yellow: #e9d902;
+    --task-color-red: #dd2202;
+    --task-color-purple: #a800a8;
+}
+
+body {
+    color: var(--text-50);
+    background-color: var(--background-900);
+}
+
+
+
+h2 {
+    font-size: larger;
+}
+
+p {
+    font-size: small;
+}
+
+/* Styling for the main dashboard */
+
+.taskColContainer {
+    display: flex;
+    height: 85vh; 
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 33vw;
+    min-width: 33vw;
+}
+
+.taskCol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content:flex-start;
+    align-content: flex-start;
+}
+
+.openCol {
+    padding-right: 2rem;
+}
+
+.wipCol {
+    border-right: grey solid 1px;
+    border-left: grey solid 1px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.doneCol {
+    padding-left: 2rem;
+}
+
+
+
+
+/* Styling for the taskboxes */
+
+.taskBox {
+    border-radius: 10px;
+    width: 15rem;
+    height: 15rem;
+}
+
+.taskBoxColor {
+    border-start-start-radius: 9px;
+    border-start-end-radius: 9px;
+    background-color: var(--task-color-green);
+    padding: 6px;
+}
+
+
+.taskBoxContent {
+    height: 75%;
+}
+
+.taskBoxDate {
+    margin-left: 1rem;
+}
+
+.taskBoxHeader {
+    border-bottom: grey 1px solid;
+}
+
+.taskBoxTextContent {
+    padding-top: 1rem;
+}
