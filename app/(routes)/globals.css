@@ -151,6 +151,11 @@ p {
     font-size: small;
 }
 
+.headerMainPage {
+    height: 7vh;
+}
+
+
 /* Styling for the main dashboard */
 
 .taskColContainer {
@@ -218,4 +223,29 @@ p {
 
 .taskBoxTextContent {
     padding-top: 1rem;
+}
+
+
+/* TaskPage */
+
+.taskPageMain {
+    height: 93vh;
+}
+
+.taskPageBoxMid {
+    min-height: fit-content;
+    max-height: 50rem;
+    height: 40rem;
+    min-width: fit-content;
+    max-width: 60rem;
+    width: 50rem;
+}
+
+.taskPageBoxSide {
+    min-height: fit-content;
+    max-height: 50rem;
+    height: 20rem;
+    min-width: fit-content;
+    max-width: 20rem;
+    width: 10rem;
 }

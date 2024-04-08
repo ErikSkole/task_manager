@@ -10,6 +10,7 @@ export default async function Home() {
   
   const tasks = await prisma.task.findMany({
   })
+  
   return (
     <main className="flex p-8 bg-background-800">
       <div className="taskColContainer openCol">

@@ -15,20 +15,29 @@ export default function TaskPage({
         const fetchTask = async () => {
             const res = await fetch(`/api/test?id=${id}`)
             const data = await res.json()
-            console.log(data.title)
             setTask(data)
         }
         fetchTask()
     }, [])
 
+    console.log(task)
 
     return (
-        <main className='flex justify-center bg-background-800'>
-            <div className='flex flex-col min-h-64 min-w-64 bg-background-700 p-4'>
-                <h1>
+        <main className='taskPageMain flex justify-center bg-background-800'>
+            <div className='taskPageBoxSide basis-4/12 mt-32 m-8 rounded-md'></div>
+            <div className='taskPageBoxMid flex flex-col mt-32 bg-background-700 p-4 rounded-md p-16'>
+                <h1 className='text-3xl mb-8'>
                     {task.title}
                 </h1>
-                <p>{task.description}</p>
+                <p className='text-md'>
+                    {task.description}
+                </p>
+            </div>
+            <div className='taskPageBoxSide bg-background-700 basis-4/12 mt-32 m-8 rounded-md'>
+                <h1 className='text-2xl ml-8 mt-16 mb-8'>
+                    User responisble:
+                </h1>
+                
             </div>
         </main>
     )
